@@ -1,5 +1,10 @@
 ### install Arkime
 
+NB ! Make sure you set hostname properly and rewrite sX with your student number.
+```shell
+hostnamectl set-hostname sX.elliku.eu
+```
+
 ```shell
 mkdir -p /home/student/arkime
 cd /home/student/arkime
