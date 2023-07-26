@@ -1,0 +1,22 @@
+logging.level: debug
+filebeat.inputs:
+  - type: filestream
+    id: otrf-datasets
+    enabled: true
+    paths:
+      - /opt/Security-Datasets/datasets/compound/apt29/day1/apt29_evals_day1_manual_2020-05-01225525.json
+      - /opt/Security-Datasets/datasets/compound/apt29/day2/apt29_evals_day2_manual_2020-05-02035409.json
+      - /opt/Security-Datasets/datasets/compound/windows/apt3/empire_apt3_2019-05-14223117.json
+    parsers:
+      - ndjson:
+        add_error_key: true
+output.console:
+  pretty: true
+  enabled: false
+output.elasticsearch:
+  enabled: true
+  hosts: ["https://localhost:9200"]
+  username: elastic
+  password: changeme
+  index: 'otrf-day1'
+setup.template.enabled: false
