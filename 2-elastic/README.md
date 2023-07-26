@@ -6,7 +6,7 @@ cd /home/student/es
 ```
 Update sysctl
 ```shell
-sysctl -w vm.max_map_count=262144
+sudo sysctl -w vm.max_map_count=262144
 ```
 Change passwords if necessary in .env file and then boot up the cluster
 ```shell
