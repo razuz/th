@@ -55,3 +55,29 @@ sudo systemctl restart suricata
 ```
 
 
+Debugging and verifying it works:
+
+```shell
+sudo tail -f /var/log/suricata/suricata.log
+```
+
+and for statistics:
+
+```shell
+sudo tail -f /var/log/suricata/stats.log
+```
+
+### Alerts
+
+You can either view `/var/log/suricata/fast.log` or `/var/log/suricata/eve.json` for more details.
+If no alerts are appearing, run the following test command, that has a signature in the ETOpen ruleset for these cases:
+
+```
+curl http://testmynids.org/uid/index.html
+```
+
+This should generate the following line in `/var/log/suricata/fast.log`:
+
+```shell
+07/26/2023-17:43:56.617890  [**] [1:2100498:7] GPL ATTACK_RESPONSE id check returned root [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 18.66.122.20:80 -> 164.92.198.169:40316
+```
