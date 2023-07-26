@@ -48,6 +48,8 @@ docker compose up -d
 1. Create a second non admin organisation
 1. Go to users tab for new organisation, create a user there and create API key for the user
 1. Update the `.env` file with the new API key
-1. Restart The Hive node. `docker compose restart thehive`
+1. Restart the setup:
+    * `docker compose down`
+    * `docker compose up -d`
 1. Log in to The Hive at https://sX.elliku.eu with user `admin@thehive.local` & password `secret`
 
