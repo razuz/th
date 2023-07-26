@@ -37,6 +37,7 @@ chown -R 1000:1000 /opt/hive/vol/elasticsearch
 Run the setup:
 
 ```shell
+docker network create proxy
 docker compose up -d
 ```
 
