@@ -67,6 +67,7 @@ services:
       - ./vol/thehive/index:/opt/thp/thehive/index
     command:
       --cortex-port 9001
+      --cortex-keys ${CORTEX_KEY}
     networks:
       - proxy
       - backend
