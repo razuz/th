@@ -7,7 +7,7 @@ cd /home/student/es
 
 Change passwords if necessary in .env file and then boot up the cluster
 ```shell
-docker compose up -d
+sudo docker compose up -d
 ```
 
 seeing what containers are running
