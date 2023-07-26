@@ -29,7 +29,7 @@
 * skip Mappings
 * skip Aliases
 
-* Download some example data
+### Download some example data
 ```shell
 apt-get install -y unzip
 cd /opt
@@ -44,7 +44,7 @@ cd /opt/Security-Datasets/datasets/compound/windows/apt3/
 tar xvzf empire_apt3.tar.gz
 ```
 
-Create filebeat.yml file
+### Create filebeat.yml file and ingest data
 ```shell
 cd /opt
 mkdir fb
@@ -52,3 +52,8 @@ cd fb
 wget https://raw.githubusercontent.com/razuz/th/main/3-dataset/filebeat.yml
 filebeat -c /opt/fb/filebeat.yml --path.data /opt/fb --path.home /opt/fb --path.logs /opt/fb
 ```
+
+### Create kibana data view
+
+* Go to Stack Management -> Kibana -> Data Views
+* Create data view (otrf)
