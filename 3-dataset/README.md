@@ -1,5 +1,35 @@
 ## Importing data
 
+* Install integrations
+  * Windows integration
+* Go to Stack Management -> Index Management -> Index Templates
+* Create Template
+  * Name: otrf
+  * Index patterns: otrf-*
+  * Enable "Create data stream"
+  * (optional) Priority: 400
+  * (optional) Version: 1
+* Add components:
+  * logs-windows.forwarded@package
+  * logs-windows.powershell@package
+  * logs-windows.powershell_operational@package
+  * logs-windows.sysmon_operational@package
+* Add index settings
+```shell
+{
+  "index": {
+    "lifecycle": {
+      "name": "otrf-policy"
+    },
+    "number_of_replicas": "0",
+    "default_pipeline": "logs-windows.forwarded-1.27.0"
+  }
+}
+```
+* skip Mappings
+* skip Aliases
+
+* Download some example data
 ```shell
 apt-get install -y unzip
 cd /opt
@@ -13,6 +43,7 @@ unzip apt29_evals_day2_manual.zip
 cd /opt/Security-Datasets/datasets/compound/windows/apt3/
 tar xvzf empire_apt3.tar.gz
 ```
+
 Create filebeat.yml file
 ```shell
 cd /opt
