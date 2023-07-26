@@ -81,3 +81,11 @@ This should generate the following line in `/var/log/suricata/fast.log`:
 ```shell
 07/26/2023-17:43:56.617890  [**] [1:2100498:7] GPL ATTACK_RESPONSE id check returned root [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 18.66.122.20:80 -> 164.92.198.169:40316
 ```
+
+Looking at `eve.json` for more detail and pretty output:
+
+```shell
+sudo tail -f /var/log/suricata/eve.json | jq 'select(.event_type=="alert")'
+```
+
+
