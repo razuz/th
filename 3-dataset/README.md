@@ -34,7 +34,6 @@
 apt-get install -y unzip
 cd /opt
 sudo ln -s /opt/Elastic/Agent/data/elastic-agent-*/components/filebeat /usr/local/bin/filebeat
-cd 
 git clone https://github.com/OTRF/Security-Datasets.git
 cd /opt/Security-Datasets/datasets/compound/apt29/day1/
 unzip apt29_evals_day1_manual.zip
