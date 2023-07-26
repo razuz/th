@@ -19,4 +19,5 @@ output.elasticsearch:
   username: elastic
   password: changeme
   index: 'otrf-day1'
+  ssl.certificate_authorities: ["/var/lib/docker/volumes/es_certs/_data/ca/ca.crt"]
 setup.template.enabled: false
