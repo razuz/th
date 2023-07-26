@@ -51,6 +51,14 @@ Change certificate in config file /opt/arkime/etc/config.ini. caTrustFile variab
 caTrustFile=/usr/local/share/ca-certificates/es.crt
 ```
 
+add geoip database
+```shell
+cd /opt/arkime/etc
+wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
+wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb
+wget https://standards-oui.ieee.org/oui/oui.csv > oui.txt
+```
+
 start capture and viewer
 ```shell
 systemctl start arkimecapture.service
