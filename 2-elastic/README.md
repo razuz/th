@@ -15,7 +15,12 @@ sudo docker compose up -d
 
 To install fleet server install agent with modified parameters
 ```shell
-sudo ./elastic-agent install --fleet-server-es=https://localhost:9200 --fleet-server-service-token=__YOUR_TOKEN__ --fleet-server-policy=fleet-server-policy  --fleet-server-port=8220 --fleet-server-es-ca /var/lib/docker/volumes/es_certs/_data/ca/ca.crt
+sudo ./elastic-agent install \
+--fleet-server-es=https://localhost:9200 \
+--fleet-server-service-token=__YOUR_TOKEN__ \
+--fleet-server-policy=fleet-server-policy \
+--fleet-server-port=8220 \
+--fleet-server-es-ca /var/lib/docker/volumes/es_certs/_data/ca/ca.crt
 ````
 
 
