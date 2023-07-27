@@ -56,6 +56,11 @@ Change certificate in config file /opt/arkime/etc/config.ini. caTrustFile variab
 caTrustFile=/usr/local/share/ca-certificates/es.crt
 ```
 
+Change elasticsearch config in /opt/arkime/etc/config.ini
+```shell
+elasticsearch=https://elastic:changeme@localhost:9200
+```
+
 add geoip database
 ```shell
 cd /opt/arkime/etc
