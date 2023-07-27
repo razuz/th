@@ -7,7 +7,7 @@ update-ca-certificates -f
 ```
 2. Get certificate fingerprint
 ```shell
-openssl x509 -fingerprint -sha256 -in /usr/local/share/ca-certificates/es.crt | grep Finger | sed -e 's/://g' | sed -e 's/.*=//g'
+openssl x509 -fingerprint -sha256 -in /usr/local/share/ca-certificates/ca.crt | grep Finger | sed -e 's/://g' | sed -e 's/.*=//g'
 ```
 3. add fingerprint to Fleet -> Settings -> Edit Output -> "Elasticsearch CA trusted fingerprint (optional)"
 4. Delete agent with "Fleet server policy" under Fleet -> Agents
