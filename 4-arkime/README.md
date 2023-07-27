@@ -2,7 +2,7 @@
 
 NB ! Make sure you set hostname properly and rewrite sX with your student number.
 ```shell
-hostnamectl set-hostname sX.elliku.eu
+hostnamectl set-hostname s11.elliku.eu
 ```
 
 ```shell
@@ -64,9 +64,9 @@ elasticsearch=https://elastic:changeme@localhost:9200
 add geoip database
 ```shell
 cd /opt/arkime/etc
-wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
-wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb
-wget https://standards-oui.ieee.org/oui/oui.csv > oui.txt
+sudo wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
+sudo wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb
+sudo wget https://standards-oui.ieee.org/oui/oui.csv > oui.txt
 ```
 
 start capture and viewer
