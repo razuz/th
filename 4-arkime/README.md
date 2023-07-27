@@ -47,8 +47,8 @@ Init admin user
 
 make certificate readable for arkime
 ```shell
-sudo cp /var/lib/docker/volumes/es_certs/_data/ca/ca.crt /usr/local/share/ca-certificates/es.crt /var/lib/docker/volumes/es_certs/_data/ca/ca.crt
-sudo chmod 644 /usr/local/share/ca-certificates/es.crt
+sudo cp /var/lib/docker/volumes/es_certs/_data/ca/ca.crt /usr/local/share/ca-certificates/es.crt /usr/local/share/ca-certificates/ca.crt
+sudo chmod 644 /usr/local/share/ca-certificates/ca.crt
 ```
 
 Change certificate in config file /opt/arkime/etc/config.ini. caTrustFile variable should look like this
