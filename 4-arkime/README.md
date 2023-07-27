@@ -53,7 +53,7 @@ sudo chmod 644 /usr/local/share/ca-certificates/ca.crt
 
 Change certificate in config file /opt/arkime/etc/config.ini. caTrustFile variable should look like this
 ```
-caTrustFile=/usr/local/share/ca-certificates/es.crt
+caTrustFile=/usr/local/share/ca-certificates/ca.crt
 ```
 
 Change elasticsearch config in /opt/arkime/etc/config.ini
