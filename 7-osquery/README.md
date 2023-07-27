@@ -1,15 +1,15 @@
 ## update osquery installation
 
-1. Get certificate fingerprint
-```shell
-openssl x509 -fingerprint -sha256 -in /usr/local/share/ca-certificates/es.crt | grep Finger | sed -e 's/://g' | sed -e 's/.*=//g'
-```
-2. add fingerprint to Fleet -> Settings -> Edit Output -> "Elasticsearch CA trusted fingerprint (optional)"
-3. Add certificate to OS CA store
+1. Add certificate to OS CA store
 ```shell
 cp /var/lib/docker/volumes/es_certs/_data/ca/ca.crt /usr/local/share/ca-certificates/
 update-ca-certificates -f
 ```
+2. Get certificate fingerprint
+```shell
+openssl x509 -fingerprint -sha256 -in /usr/local/share/ca-certificates/es.crt | grep Finger | sed -e 's/://g' | sed -e 's/.*=//g'
+```
+3. add fingerprint to Fleet -> Settings -> Edit Output -> "Elasticsearch CA trusted fingerprint (optional)"
 4. Delete agent with "Fleet server policy" under Fleet -> Agents
 5. Cleanup the Agent installation
 ```shell
