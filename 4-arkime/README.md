@@ -10,13 +10,13 @@ mkdir -p /home/student/arkime
 cd /home/student/arkime
 wget https://s3.amazonaws.com/files.molo.ch/builds/ubuntu-22.04/arkime_4.3.2-1_amd64.deb
 sudo dpkg -i arkime_4.3.2-1_amd64.deb
-apt-get -f install -y
+sudo apt-get -f install -y
 ```
 
 You will need to run Configure script to setup Arkime. You can run it with the following command and with output:
 
 ```shell
-# /opt/arkime/bin/Configure
+# sudo /opt/arkime/bin/Configure
 Found interfaces: br-d6211de5c3b4;docker0;eth0;eth1;lo;veth02ca5a1;veth243c608
 Semicolon ';' seperated list of interfaces to monitor [eth1] eth0
 Install Elasticsearch server locally for demo, must have at least 3G of memory, NOT recommended for production use (yes or no) [no] 
@@ -37,12 +37,7 @@ Arkime - Configured - Now continue with step 4 in /opt/arkime/README.txt
 
 Init elasticsearch
 ```shell
-/opt/arkime/db/db.pl --insecure --esuser elastic:changeme https://localhost:9200 init
-```
-
-Init admin user
-```shell
-/opt/arkime/bin/arkime_add_user.sh --insecure admin "Admin User" studentpass1 --admin
+sudo /opt/arkime/db/db.pl --insecure --esuser elastic:changeme https://localhost:9200 init
 ```
 
 make certificate readable for arkime
@@ -59,6 +54,11 @@ caTrustFile=/usr/local/share/ca-certificates/ca.crt
 Change elasticsearch config in /opt/arkime/etc/config.ini
 ```shell
 elasticsearch=https://elastic:changeme@localhost:9200
+```
+
+Init admin user
+```shell
+sudo /opt/arkime/bin/arkime_add_user.sh --insecure admin "Admin User" studentpass1 --admin
 ```
 
 add geoip database
