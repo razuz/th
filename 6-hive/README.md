@@ -6,6 +6,11 @@ cd /opt/hive
 ```
 
 Create `.env` file and `docker-compose.yml` file based on the files in this repo
+```shell
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/.env
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/docker-compose.yml
+```
+
 
 ```shell
 mkdir -p vol/{nginx,ssl,thehive,elasticsearch}
@@ -18,6 +23,13 @@ Copy over the following files, from this repository:
 - certs.conf   ->  /opt/hive/vol/nginx/certs.conf
 - cortex.conf  ->  /opt/hive/vol/nginx/cortex.conf
 - thehive.conf ->  /opt/hive/vol/nginx/thehive.conf
+
+```shell
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/application.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/certs.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/cortex.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/thehive.conf
+```
 
 Symlink Let's Encrypt certs to the correct location:
 
