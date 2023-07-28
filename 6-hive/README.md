@@ -14,10 +14,10 @@ mkdir -p vol/{nginx,ssl,thehive,elasticsearch}
 
 Copy over the following files, from this repository:
 
-- /opt/hive/vol/thehive/application.conf
-- /opt/hive/vol/nginx/certs.conf
-- /opt/hive/vol/nginx/cortex.conf
-- /opt/hive/vol/nginx/thehive.conf
+- application  ->  /opt/hive/vol/thehive/application.conf
+- certs.conf   ->  /opt/hive/vol/nginx/certs.conf
+- cortex.conf  ->  /opt/hive/vol/nginx/cortex.conf
+- thehive.conf ->  /opt/hive/vol/nginx/thehive.conf
 
 Symlink Let's Encrypt certs to the correct location:
 
