@@ -53,3 +53,20 @@ docker compose up -d
     * `docker compose up -d`
 1. Log in to The Hive at https://sX.elliku.eu with user `admin@thehive.local` & password `secret`
 
+
+
+
+## Creating test alerts in Hive
+
+```shell
+cd /opt/hive
+```
+
+- Download `requirements.txt` and `hive.py` to the folder
+- Create a virtual env with: `python3 -m venv venv`
+- Activate virtualenv: `source venv/bin/activate`
+- Edit the token and url in `hive.py` on line 49. Optionally edit alert details.
+- Save the file and run it with: `python hive.py`
+- You should see an alert in The Hive
+
+
