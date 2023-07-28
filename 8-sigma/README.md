@@ -6,6 +6,7 @@
 git clone https://github.com/SigmaHQ/sigma.git
 cd sigma
 python3 -m venv venv
+source venv/bin/activate
 pip install sigma-cli
 ```
 
