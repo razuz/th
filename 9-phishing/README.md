@@ -28,7 +28,7 @@ tlds:
 
 run script
 ```shell
-python3 phishing_catcher.py
+python3 catch_phishing.py
 ```
 
 ## Run the same thing in docker
