@@ -25,10 +25,10 @@ Copy over the following files, from this repository:
 - thehive.conf ->  /opt/hive/vol/nginx/thehive.conf
 
 ```shell
-wget https://raw.githubusercontent.com/razuz/th/main/6-hive/application.conf
-wget https://raw.githubusercontent.com/razuz/th/main/6-hive/certs.conf
-wget https://raw.githubusercontent.com/razuz/th/main/6-hive/cortex.conf
-wget https://raw.githubusercontent.com/razuz/th/main/6-hive/thehive.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/application.conf > /opt/hive/vol/thehive/application.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/certs.conf > /opt/hive/vol/nginx/certs.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/cortex.conf > /opt/hive/vol/nginx/cortex.conf
+wget https://raw.githubusercontent.com/razuz/th/main/6-hive/thehive.conf > /opt/hive/vol/nginx/thehive.conf
 ```
 
 Symlink Let's Encrypt certs to the correct location:
